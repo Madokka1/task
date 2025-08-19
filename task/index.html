@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Управление задачами</title>
+    <meta name="description" content="Современный таск-менеджер для эффективного управления задачами и проектами">
+    <meta name="keywords" content="таск менеджер, задачи, планирование, продуктивность">
+    <meta property="og:title" content="TaskFlow - Управление задачами">
+    <meta property="og:description" content="Современный таск-менеджер для эффективного управления задачами и проектами">
+    <meta name="twitter:title" content="TaskFlow - Управление задачами">
+    <meta name="twitter:description" content="Современный таск-менеджер для эффективного управления задачами и проектами">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #f1f5f9;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-gray-50 text-[var(--text-primary)] font-sans;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)] px-4 py-2 rounded-lg hover:bg-slate-200 transition-colors duration-200 font-medium;
+        }
+        
+        .btn-success {
+            @apply bg-[var(--accent-color)] text-white px-3 py-1 rounded-md hover:bg-emerald-600 transition-colors duration-200 text-sm;
+        }
+        
+        .btn-danger {
+            @apply bg-[var(--danger-color)] text-white px-3 py-1 rounded-md hover:bg-red-600 transition-colors duration-200 text-sm;
+        }
+        
+        .task-card {
+            @apply bg-white rounded-lg shadow-sm border border-[var(--border-color)] p-4 hover:shadow-md transition-shadow duration-200;
+        }
+        
+        .input-field {
+            @apply w-full px-3 py-2 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+    }
+    </style>
+
+    <script>
+        const ChartJS = window.Chart;
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/AuthForm.js"></script>
+    <script type="text/babel" src="components/Dashboard.js"></script>
+    <script type="text/babel" src="components/TaskItem.js"></script>
+    <script type="text/babel" src="components/AddTaskForm.js"></script>
+    <script type="text/babel" src="components/TaskList.js"></script>
+    <script type="text/babel" src="components/TaskStats.js"></script>
+    <script type="text/babel" src="components/KanbanBoard.js"></script>
+    <script type="text/babel" src="components/FinanceTracker.js"></script>
+    <script type="text/babel" src="components/Calendar.js"></script>
+    <script type="text/babel" src="components/Archive.js"></script>
+    <script type="text/babel" src="utils/authManager.js"></script>
+    <script type="text/babel" src="utils/taskManager.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
