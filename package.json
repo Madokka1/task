@@ -1,0 +1,21 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "Современный таск-менеджер для эффективного управления задачами и проектами",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed - static files ready'",
+    "start": "echo 'Starting TaskFlow application'",
+    "dev": "echo 'Development server would start here'"
+  },
+  "keywords": [
+    "task-manager",
+    "productivity",
+    "tasks",
+    "planning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
